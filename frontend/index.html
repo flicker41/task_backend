@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship API - Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="toast" class="toast"></div>
+
+    <div id="auth-container" class="container glassmorphism">
+        <div class="logo">✦ Internship API</div>
+        <h2 id="auth-title">Welcome Back</h2>
+        <form id="auth-form">
+            <div class="input-group">
+                <input type="text" id="username" required placeholder=" ">
+                <label for="username">Username</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required placeholder=" ">
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="btn-primary" id="auth-btn">Log In</button>
+        </form>
+        <p class="toggle-auth">
+            <span id="auth-toggle-text">Don't have an account?</span> 
+            <a href="#" id="toggle-auth-btn">Register</a>
+        </p>
+    </div>
+
+    <div id="dashboard-container" class="dashboard hidden glassmorphism">
+        <header class="dashboard-header">
+            <div class="logo">✦ Internship Dashboard</div>
+            <div class="user-info">
+                <span id="user-role-badge" class="badge">Role</span>
+                <span id="username-display">User</span>
+                <button id="logout-btn" class="btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="sidebar">
+                <h3>Create Task</h3>
+                <form id="task-form">
+                    <div class="input-group">
+                        <input type="text" id="task-title" required placeholder=" ">
+                        <label for="task-title">Title</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="task-desc" rows="3" placeholder=" "></textarea>
+                        <label for="task-desc">Description</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Add Task</button>
+                </form>
+            </div>
+
+            <div class="main-content">
+                <div class="tasks-header">
+                    <h2>Your Tasks</h2>
+                    <div class="filter">
+                        <select id="status-filter">
+                            <option value="all">All</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="tasks-list" class="tasks-grid">
+                    <!-- Tasks will be injected here via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
