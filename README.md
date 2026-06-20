@@ -1,4 +1,4 @@
-# Backend Developer Internship Assignment
+# Backend 
 
 This repository contains the backend and frontend source code for the Backend Developer Internship assignment. 
 
